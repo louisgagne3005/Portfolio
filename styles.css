@@ -1,0 +1,671 @@
+/* 
+Ordre de la structure des styles
+
+1. Variables
+2. Éléments Importants
+3. Barre de Naviguation
+4. Acceuil
+5. Compétences
+6. Parcours
+7. Section Projets
+8. Section Formulaire de Contact
+9. Footer
+10. Formulaire de Contact
+11. Projets
+*/
+
+/* VARIABLES */
+:root {
+  /* Couleurs */
+  --vert: #4caf50;
+  --bleu: #b3e5fc;
+  --turquoise: #008080;
+
+  --blanc: #fff;
+  --gris: #555;
+  --noir-doux: #333;
+  --noir-moyen: #222;
+  --noir-intense: #111;
+
+  --ombre-noire: rgba(0, 0, 0, 0.3);
+  --ombre-grise: #ccc;
+
+  /* Polices */
+  --police-principale: "open sans", sans-serif;
+  --police-titre: Arial, sans-serif;
+  --police-sous-titre: Georgia, sans-serif;
+  --police-texte: "Times New Roman", sans-serif;
+  --police-formulaire: "lato", sans-serif;
+
+  /* Tailles */
+  --ombre-boite: 0 3px 6px;
+  --ombre-texte: 2px 2px 2px;
+
+  --minuscule: 0.5rem;
+  --tres-petit: 1rem;
+  --petit: 1.5rem;
+  --moyen: 2rem;
+  --grand: 5rem;
+  --tres-grand: 10rem;
+  --enorme: 20rem;
+
+  --bordure: 2px solid;
+
+  /* Transition */
+  --transition: all 0.3s ease-in-out;
+}
+
+/* ÉLÉMENTS IMPORTANTS */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--police-principale);
+  color: var(--noir-doux);
+  background-color: var(--blanc);
+}
+
+.bouton {
+  display: inline-block;
+  background-color: var(--vert);
+  color: var(--blanc);
+  padding: var(--moyen) var(--grand);
+  border-radius: var(--tres-grand);
+  font-size: var(--petit);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.bouton:hover {
+  background-color: var(--blanc);
+  color: var(--vert);
+  border: var(--bordure) var(--vert);
+}
+
+.bouton-retour {
+  background-color: var(--turquoise);
+  border: none;
+  border-radius: var(--minuscule);
+  color: var(--blanc);
+  cursor: pointer;
+  text-decoration: none;
+  font-family: var(--police-formulaire);
+  font-size: var(--tres-petit);
+  font-weight: 700;
+  padding: var(--tres-petit) var(--tres-petit);
+  text-transform: uppercase;
+  transition: var(--transition);
+  margin-left: var(--tres-petit);
+}
+
+.bouton-retour:hover {
+  background-color: var(--blanc);
+  color: var(--turquoise);
+  border: var(--bordure) var(--turquoise);
+}
+
+/* BARRE DE NAVIGUATION */
+header {
+  background-color: var(--blanc);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--tres-petit);
+  box-shadow: var(--ombre-boite) var(--ombre-grise);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav li:not(:last-child) {
+  margin-right: var(--moyen);
+}
+
+nav a {
+  color: var(--noir-intense);
+  text-decoration: none;
+  font-size: var(--tres-petit);
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+@media screen and (max-width: 625px) {
+  nav a {
+    font-size: var(--petit);
+  }
+
+  nav li:not(:last-child) {
+    margin-bottom: var(--petit);
+  }
+}
+
+nav a:hover {
+  border-bottom: var(--bordure) var(--vert);
+}
+
+/* ACCEUIL */
+.acceuil {
+  text-align: center;
+  padding: 15rem 0;
+  background-image: url("https://wallpaperaccess.com/full/4627155.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.titre {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "image titre"
+    "image titre2";
+  max-width: 55rem;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 900px) {
+  .titre {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "titre"
+      "titre2"
+      "image";
+  }
+}
+
+.titre h1 {
+  grid-area: titre;
+  font-size: var(--grand);
+  font-weight: bold;
+  margin-bottom: var(--moyen);
+  color: var(--noir-moyen);
+  text-shadow: var(--ombre-texte) var(--ombre-grise);
+  letter-spacing: 0.1rem;
+  font-family: var(--police-titre);
+}
+
+.titre h2 {
+  grid-area: titre2;
+  font-size: var(--grand);
+  font-weight: bold;
+  margin-bottom: var(--moyen);
+  color: var(--noir-moyen);
+  text-shadow: var(--ombre-texte) var(--ombre-grise);
+  letter-spacing: 0.1rem;
+  font-family: var(--police-titre);
+}
+
+.titre img {
+  grid-area: image;
+  max-width: 100%;
+  max-width: 18rem;
+  margin: 0 auto;
+}
+
+.acceuil-informations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.acceuil-informations p {
+  font-size: var(--moyen);
+  font-weight: bold;
+  margin-bottom: var(--moyen);
+  color: var(--noir-doux);
+  line-height: 1.5;
+  font-family: var(--police-sous-titre);
+}
+
+/* COMPÉTENCES */
+.competences {
+  padding: var(--grand) 0;
+  text-align: center;
+}
+
+.competences h2 {
+  font-family: var(--police-sous-titre);
+  font-size: var(--moyen);
+  margin-bottom: var(--moyen);
+  color: var(--noir-doux);
+}
+
+.competences p {
+  font-family: var(--police-texte);
+  font-size: var(--tres-petit);
+  line-height: 1.5;
+  margin-bottom: var(--moyen);
+  color: var(--noir-doux);
+  max-width: 85rem;
+  margin: 0 auto;
+}
+
+/* PARCOURS */
+.parcours {
+  background-color: var(--bleu);
+  padding: var(--grand) 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "titre titre"
+    "texte image";
+  text-align: center;
+  justify-items: center;
+}
+
+.parcours h2 {
+  font-family: var(--police-sous-titre);
+  font-size: var(--moyen);
+  grid-area: titre;
+  margin-bottom: var(--moyen);
+}
+
+.parcours p {
+  font-family: var(--police-texte);
+  font-size: var(--moyen);
+  font-weight: bold;
+  grid-area: texte;
+  margin: var(--moyen);
+}
+
+@media screen and (max-width: 1700px) {
+  .parcours p {
+    font-size: var(--petit);
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .parcours {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "titre"
+      "texte"
+      "image";
+  }
+}
+
+.parcours-cv {
+  grid-area: image;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 25rem;
+}
+
+.parcours-cv img {
+  width: 100%;
+  max-width: var(--enorme);
+  margin-bottom: var(--petit);
+}
+
+/* SECTION PROJETS */
+.projets {
+  padding: var(--tres-grand) 0;
+  text-align: center;
+  background-color: var(--blanc);
+}
+
+.projets h2 {
+  font-family: var(--police-sous-titre);
+  font-size: var(--moyen);
+  margin-bottom: var(--moyen);
+  color: var(--noir-doux);
+}
+
+.projets ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--grand);
+  margin-top: var(--grand);
+}
+
+.projets li {
+  height: 550px;
+  width: 400px;
+  background-color: var(--blanc);
+  box-shadow: var(--ombre-boite) var(--ombre-noire);
+  border-radius: var(--minuscule);
+  overflow: hidden;
+}
+
+.projets img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.projets div {
+  padding: var(--moyen);
+}
+
+.projets h3 {
+  font-size: var(--petit);
+  font-weight: bold;
+  margin-bottom: var(--tres-petit);
+  color: var(--noir-doux);
+}
+
+.projets p {
+  font-size: var(--tres-petit);
+  line-height: 1.5;
+  margin-bottom: var(--moyen);
+  color: var(--noir-doux);
+}
+
+/* SECTION CONTACT */
+.contact {
+  background-color: var(--bleu);
+  padding: var(--grand) 0;
+  text-align: center;
+}
+
+.contact {
+  margin: 0 auto;
+}
+
+.contact h2 {
+  color: var(--turquoise);
+  font-family: var(--police-sous-titre);
+  font-size: var(--moyen);
+  margin-bottom: var(--moyen);
+}
+
+.contact p {
+  color: var(--noir-doux);
+  font-size: var(--petit);
+  margin-bottom: var(--moyen);
+}
+
+.contact a {
+  background-color: var(--turquoise);
+  border-radius: var(--minuscule);
+  color: var(--blanc);
+  display: inline-block;
+  font-size: var(--petit);
+  font-weight: bold;
+  padding: var(--tres-petit) var(--moyen);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.contact a:hover {
+  background-color: var(--blanc);
+  color: var(--turquoise);
+}
+
+/* FOOTER */
+footer {
+  padding: var(--moyen) 0;
+  font-size: var(--tres-petit);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.footer-left h3,
+.footer-right h3 {
+  font-size: var(--tres-petit);
+  margin-bottom: var(--petit);
+}
+
+.footer-left p {
+  margin: 0;
+}
+
+.footer-right ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-right li {
+  margin-bottom: var(--minuscule);
+}
+
+.footer-right li a {
+  color: var(--gris);
+  text-decoration: none;
+}
+
+.footer-right li a:hover {
+  color: var(--noir-intense);
+}
+
+.fa-facebook,
+.fa-github,
+.fa-instagram,
+.fa-linkedin {
+  font-size: var(--petit);
+  color: var(--gris);
+  margin-right: var(--minuscule);
+}
+
+.fa-facebook:hover,
+.fa-github:hover,
+.fa-instagram:hover,
+.fa-linkedin:hover {
+  color: var(--noir-intense);
+}
+
+/* FORMULAIRE DE CONTACT */
+.formulaire-fond {
+  background-image: url(https://www.davismiles.com/wp-content/uploads/sites/1/2018/07/Greg-Graphic-Page-web.jpg);
+  background-size: 1920px 1080px;
+  background-repeat: no-repeat;
+  padding: var(--moyen) 0;
+}
+
+.formulaire {
+  background-color: var(--blanc);
+  border-radius: var(--tres-petit);
+  box-shadow: var(--ombre-boite) var(--ombre-noire);
+  margin: 0 auto;
+  max-width: 600px;
+  padding: var(--moyen);
+  margin-top: var(--grand);
+}
+
+.formulaire h2 {
+  color: var(--turquoise);
+  font-size: var(--moyen);
+  font-weight: 700;
+  margin-bottom: var(--moyen);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.formulaire label {
+  color: var(--noir-doux);
+  display: block;
+  font-size: var(--petit);
+  font-weight: 600;
+  margin-bottom: var(--minuscule);
+}
+
+.formulaire input,
+.formulaire textarea {
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: var(--minuscule);
+  color: var(--noir-doux);
+  font-family: var(--police-formulaire);
+  font-size: var(--tres-petit);
+  margin-bottom: var(--moyen);
+  padding: var(--tres-petit);
+  transition: var(--transition);
+  width: 100%;
+  max-height: var(--enorme);
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.formulaire input:focus,
+.formulaire textarea:focus {
+  background-color: var(--blanc);
+  box-shadow: var(--ombre-boite) var(--ombre-noire);
+  outline: none;
+}
+
+.formulaire button[type="submit"] {
+  background-color: var(--turquoise);
+  border: none;
+  border-radius: var(--minuscule);
+  color: var(--blanc);
+  cursor: pointer;
+  font-family: var(--police-formulaire);
+  font-size: var(--petit);
+  font-weight: 700;
+  padding: var(--tres-petit) var(--moyen);
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.formulaire button[type="submit"]:hover {
+  background-color: var(--blanc);
+  color: var(--turquoise);
+  border: var(--bordure) var(--turquoise);
+}
+
+/* PROJETS */
+.projet-page {
+  background-image: url(https://files.123freevectors.com/wp-content/original/131314-abstract-green-polygon-background-graphic-design.jpg);
+  background-size: cover;
+  background-position: cover;
+  padding: var(--moyen) 0;
+}
+
+.projet {
+  background-color: var(--bleu);
+  border-radius: var(--tres-petit);
+  box-shadow: var(--ombre-boite) var(--ombre-noire);
+  margin: 0 auto;
+  max-width: 75rem;
+  padding: var(--petit);
+  box-shadow: var(--ombre-boite) var(--ombre-noire);
+  margin-top: var(--moyen);
+}
+
+.projet-titre {
+  text-align: center;
+  margin-bottom: var(--petit);
+}
+
+.projet h1 {
+  font-family: var(--police-titre);
+  margin-bottom: var(--petit);
+  font-size: var(--grand);
+  font-weight: bold;
+  color: var(--noir-moyen);
+  text-shadow: var(--ombre-texte) var(--ombre-grise);
+  letter-spacing: 0.1rem;
+}
+
+.projet h2 {
+  font-family: var(--police-texte);
+  font-size: var(--petit);
+  color: var(--noir-doux);
+}
+
+.projet h3 {
+  font-family: var(--police-sous-titre);
+  text-align: center;
+  font-size: var(--moyen);
+  margin-top: var(--grand);
+  color: var(--noir-doux);
+}
+
+.projet img {
+  grid-area: image;
+  max-width: var(--tres-grand);
+  display: block;
+  margin: var(--tres-petit) auto;
+}
+
+.explication-projet {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--moyen);
+  padding: var(--petit);
+  background-color: var(--blanc);
+  border-radius: var(--minuscule);
+  box-shadow: var(--ombre-boite) var(--ombre-noire);
+}
+
+.explication-projet img {
+  grid-area: "image";
+  max-width: 385px;
+  min-width: 385px;
+  height: 300px;
+  border-radius: var(--minuscule);
+}
+
+.explication-projet img:hover {
+  cursor: zoom-in;
+}
+
+.projet-texte {
+  text-align: right;
+  margin-right: var(--grand);
+  color: var(--noir-doux);
+}
+
+@media screen and (max-width: 1000px) {
+  .projet-texte {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .explication-projet {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "fonctionnalité"
+      "explication"
+      "image";
+  }
+}
+
+.projet h4 {
+  grid-area: "fonctionnalité";
+  font-family: var(--police-sous-titre);
+  font-size: var(--petit);
+}
+
+.projet p {
+  grid-area: "explication";
+  font-size: var(--tres-petit);
+  line-height: 1.5;
+}

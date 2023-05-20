@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Projet jeux C++</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="projet-page">
+      <a class="bouton-retour" href="index.html#projets">< Retour</a>
+      <div class="projet">
+        <div class="projet-titre">
+          <h1>Jeux en C++</h1>
+          <h2>
+            Dans cette page, je présente et décortique 2 jeux classiques
+            programmés en C++ lors de mon parcours scolaire dans lesquels le
+            joueur affronte l'ordinateur.
+          </h2>
+        </div>
+        <h3>Jeu de Roche, Papier et Ciseaux</h3>
+        <img
+          src="https://media.istockphoto.com/id/1056840214/vector/rock-paper-scissors-vector-illustration.jpg?s=612x612&w=0&k=20&c=6KEBfon5f9BXXhLiu9JfOk6EHsM193SiWMcqDjN1jqM="
+          alt="Roche, Papier et Ciseaux"
+        />
+        <div class="explication-projet">
+          <div class="projet-texte">
+            <h4>Utilisation des enums</h4>
+            <p>
+              Le programme du jeu de roche, papier et ciseaux utilise des enums
+              pour représenter des nombres. Par exemple, dans l'enum Choix,
+              Roche est associé à la valeur 1, Papier à la valeur 2 et Ciseaux à
+              la valeur 3. Cela permet de faciliter la compréhension du
+              programme dans les fonctions qui comparent des résultats.
+            </p>
+          </div>
+          <a href="images\enum-roche_papier_ciseaux.png">
+            <img src="images\enum-roche_papier_ciseaux.png" alt="enum" />
+          </a>
+        </div>
+        <div class="explication-projet">
+          <div class="projet-texte">
+            <h4>Obtention du choix du joueur</h4>
+            <p>
+              Cette fonction permet au joueur d'entrer dans le programme son
+              choix d'option pour le jeu. Le programme retourne la valeur
+              associée à l'enum que le joueur a choisi. De plus, un "default"
+              dans le "switch" indique à l'utilisateur que son choix est
+              invalide s'il entre des données erronnées et lui demande de
+              recommencer.
+            </p>
+          </div>
+          <a href="images\choix_joueur-roche_papier_ciseaux.png">
+            <img
+              src="images\choix_joueur-roche_papier_ciseaux.png"
+              alt="choix joueur"
+            />
+          </a>
+        </div>
+        <div class="explication-projet">
+          <div class="projet-texte">
+            <h4>Choix pseudo-aléatoire de l'ordinateur</h4>
+            <p>
+              Ici, l'ordinateur fait son choix de jeu de façon pseudo-aléatoire
+              en utilisant la fonction rand basée sur le temps. La fonction
+              produira un résultat aléatoire puisque le temps change
+              constamment. À noter que le choix de l'ordinateur n'est aucunement
+              influencé par le choix du joueur afin que le jeu soit juste.
+            </p>
+          </div>
+          <a href="images\choix_ordinateur-roche_papier_ciseaux.png">
+            <img
+              src="images\choix_ordinateur-roche_papier_ciseaux.png"
+              alt="choix ordinateur"
+            />
+          </a>
+        </div>
+        <div class="explication-projet">
+          <div class="projet-texte">
+            <h4>Détermination du gagnant</h4>
+            <p>
+              Cette fonction détermine le gagnant du jeu. Cela se fait en
+              comparant tout d'abord les possibilités de jeu de l'ordinateur et
+              du joueur. Heureusement, il n'y a que trois possibilités de jeu ce
+              qui simplifie la tâche. De plus, le match nul est facilement
+              déterminé en comparant si les deux choix sont identiques, et
+              l'ordinateur est automatiquement déclaré vainqueur lorsque le
+              joueur n'a pas gagné et qu'il n'y a pas d'égalité.
+            </p>
+          </div>
+          <a href="images\gagnant-roche_papier_ciseaux.png">
+            <img src="images\gagnant-roche_papier_ciseaux.png" alt="gagnant" />
+          </a>
+        </div>
+        <h3>Jeu de mémoire</h3>
+        <img
+          src="https://i5.walmartimages.ca/images/Large/997/016/6000200997016.jpg"
+          alt="Jeu de mémoire"
+        />
+        <div class="explication-projet">
+          <div class="projet-texte">
+            <h4>Chargement d'un fichier d'utilisateurs</h4>
+            <p>
+              La première fonction appelée dans ce programme a pour but de
+              charger un fichier dans le dossier du jeu qui contient des
+              informations sur les joueurs, c'est-à-dire leur nom complet, leur
+              pseudo, leur mot de passe et le niveau dans lequel ils sont
+              rendus. Chaque utilisateur est enregistré sur une ligne dans le
+              fichier. Le fichier a pour but de sauvegarder le progrès des
+              joueurs et de le garder en sécurité derrière un système de
+              connexion.
+            </p>
+          </div>
+          <a href="Images\charger_fichier-séquentialité.png">
+            <img
+              src="Images\charger_fichier-séquentialité.png"
+              alt="charger fichier"
+            />
+          </a>
+        </div>
+        <div class="explication-projet">
+          <div class="projet-texte">
+            <h4>Générer la suite à reproduire</h4>
+            <p>
+              Une fois le joueur connecté et la partie officiellement commencée
+              après l'exécution de diverses fonctions, l'ordinateur génère la
+              suite que le joueur devra garder en mémoire pour gagner. À l'aide
+              de la fonction rand en fonction du temps, une suite de nombres
+              entre 0 et 9 sont affichés à intervalle de 1000 millisecondes,
+              puis un temps de 3000 millisecondes est alloué au joueur pour
+              mémoriser le tout.
+            </p>
+          </div>
+          <a href="Images\générer_suite-séquentialité.png">
+            <img
+              src="Images\générer_suite-séquentialité.png"
+              alt="générer suite"
+            />
+          </a>
+        </div>
+        <div class="explication-projet">
+          <div class="projet-texte">
+            <h4>Reproduction de la suite par le joueur</h4>
+            <p>
+              Dans la première des deux fonctions visant à évaluer si le joueur
+              a réussi à reproduire la suite, on obtient la réponse du joueur.
+              Si le joueur entre des espaces entre les nombres, le programme les
+              effaces afin de faciliter la comparaison. Dans la deuxième
+              fonction, chaque caractère de la string de la séquence de
+              l'utilisateur est réduit à son équivalent en int puis comparé à la
+              suite précédemment générée par l'ordinateur. Le joueur est
+              déterminé perdant si l'un des caractère est erroné.
+            </p>
+          </div>
+          <a href="Images\reproduire_suite-séquentialité.png">
+            <img
+              src="Images\reproduire_suite-séquentialité.png"
+              alt="reproduire suite"
+            />
+          </a>
+        </div>
+        <div class="explication-projet">
+          <div class="projet-texte">
+            <h4>Modification du niveau de l'utilisateur</h4>
+            <p>
+              Lorsque le joueur a terminé de jouer ou qu'il a perdu toutes ses
+              vies, il est important de sauvegarder son progrès dans le fichier.
+              Cette fonction remplace l'ancien fichier par le nouveau du même
+              nom en y recollant toutes les données puis en modifiant le niveau
+              de l'utilisateur qui vient de jouer. Son niveau est réinitialisé
+              s'il a perdu toutes ses vies.
+            </p>
+          </div>
+          <a href="Images\modifier_niveau-séquentialité.png">
+            <img
+              src="Images\modifier_niveau-séquentialité.png"
+              alt="modifier niveau"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

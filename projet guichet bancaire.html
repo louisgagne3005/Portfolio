@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Projet Guichet bancaire</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="projet-page">
+      <a class="bouton-retour" href="index.html#projets">< Retour</a>
+      <div class="projet">
+        <div class="projet-titre">
+          <h1>Guichet bancaire en C++</h1>
+          <h2>
+            Dans cette page, je présente et décortique mon programme de gestion
+            de comptes bancaires en C++ programmé lors de mon parcours scolaire.
+          </h2>
+        </div>
+        <img
+          src="https://img.freepik.com/vecteurs-premium/caractere-travailleur-bureau-homme-affaires-retirer-argent-du-guichet-automatique-illustration-dessin-anime-plat_133260-399.jpg?w=2000"
+          alt="guichet bancaire"
+        />
+        <div class="explication-projet">
+          <div class="projet-texte">
+            <h4>Opérations possibles</h4>
+            <p>
+              Ce menu affiché à l'utilisateur montre toutes les opérations
+              possibles sur le solde de son compte. Le programme de guichet
+              bancaire utilise un fichier contenant des comptes similaires à
+              celui du jeu de mémoire. Ce programme serait en théorie capable de
+              gérer les comptes de millions d'utilisateurs!
+            </p>
+          </div>
+          <a href="images\menu-guichet.png">
+            <img src="images\menu-guichet.png" alt="menu" />
+          </a>
+        </div>
+        <div class="explication-projet">
+          <div class="projet-texte">
+            <h4>Utilisation des structs et des enums</h4>
+            <p>
+              Dans ce programme, les structs permettent d'avoir accès à la
+              gestion de diverses informations concernant les comptes bancaires
+              de tous les utilisateurs. Chaque struct représente et englobe les
+              composantes de la chose portant le nom de la struct. De plus, une
+              enum est utilisée pour associer des options du menu aux valeurs
+              numériques entrées par l'utilisateur lors de sa sélection d'option
+              du menu.
+            </p>
+          </div>
+          <a href="images\struct_enum-guichet.png">
+            <img src="images\struct_enum-guichet.png" alt="structs et enums" />
+          </a>
+        </div>
+        <div class="explication-projet">
+          <div class="projet-texte">
+            <h4>Tri des comptes pour faciliter la recherche</h4>
+            <p>
+              La fonction du tri bulle a été implémentée dans ce programme afin
+              de trier les différents numéros de compte. La fonction est appelée
+              au démarrage du programme. Puisque le programme ne permet pas de
+              créer de nouveau compte, il est important d'effectuer ce tri à
+              chaque démarrage au cas où le fichier des utilisateurs aurait été
+              modifié. Des mesures sont prises pour que le tri se termine le
+              plus rapidement possible lorsqu'il n'y a pas d'éléments à trier.
+            </p>
+          </div>
+          <a href="images\tri_bulle-guichet.png">
+            <img src="images\tri_bulle-guichet.png" alt="tri bulle" />
+          </a>
+        </div>
+        <div class="explication-projet">
+          <div class="projet-texte">
+            <h4>Recherche des utilisateurs</h4>
+            <p>
+              Grâce au tri des comptes bancaires précédemment effectué, il est
+              possible de faire une recherche binaire dans la liste des
+              utilisateurs, ce qui est baucoup plus rapide que la recherche
+              séquentielle lorsque l'on cherche dans un grand nombre de données.
+              Cette fonction est utilisée pour trouver un utilisateur au départ
+              lors de la connexion ainsi que lors de la recherche d'un
+              utilisateur pour lui faire un transfert.
+            </p>
+          </div>
+          <a href="images\recherche_binaire-guichet.png">
+            <img
+              src="images\recherche_binaire-guichet.png"
+              alt="recherche binaire"
+            />
+          </a>
+        </div>
+        <div class="explication-projet">
+          <div class="projet-texte">
+            <h4>La gestion des capitaux</h4>
+            <p>
+              Voici un exemple de gestion des capitaux dans le programme. Il
+              s'agit de la fonction permettant à l'utilisateur de déposer de
+              l'argent dans son propre compte. Les fonctions de dépôts et de
+              transferts ressemblent énormément à celle-ci, avec la différence
+              qu'elles retirent de l'argent à l'utilisateur et que la fonction
+              de transfert ajoute le montant déduit à un autre compte. Toutes
+              les opérations effectuées sont enregistrées dans l'historique.
+            </p>
+          </div>
+          <a href="images\exemple_retrait-guichet.png">
+            <img
+              src="images\exemple_retrait-guichet.png"
+              alt="exemple retrait"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
