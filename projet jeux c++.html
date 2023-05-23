@@ -26,7 +26,7 @@
             <h4>Utilisation des enums</h4>
             <p>
               Le programme du jeu de roche, papier et ciseaux utilise des enums
-              pour représenter des nombres. Par exemple, dans l'enum Choix,
+              pour représenter des nombres. Par exemple, dans l'Enum Choix,
               Roche est associé à la valeur 1, Papier à la valeur 2 et Ciseaux à
               la valeur 3. Cela permet de faciliter la compréhension du
               programme dans les fonctions qui comparent des résultats.
@@ -41,10 +41,10 @@
             <h4>Obtention du choix du joueur</h4>
             <p>
               Cette fonction permet au joueur d'entrer dans le programme son
-              choix d'option pour le jeu. Le programme retourne la valeur
-              associée à l'enum que le joueur a choisi. De plus, un "default"
+              choix d'options pour le jeu. Le programme retourne la valeur
+              associée à l'Enum que le joueur a choisi. De plus, un "default"
               dans le "switch" indique à l'utilisateur que son choix est
-              invalide s'il entre des données erronnées et lui demande de
+              invalide s'il entre des données erronées et lui demande de
               recommencer.
             </p>
           </div>
@@ -124,7 +124,7 @@
               après l'exécution de diverses fonctions, l'ordinateur génère la
               suite que le joueur devra garder en mémoire pour gagner. À l'aide
               de la fonction rand en fonction du temps, une suite de nombres
-              entre 0 et 9 sont affichés à intervalle de 1000 millisecondes,
+              entre 0 et 9 sont affichés à intervalles de 1000 millisecondes,
               puis un temps de 3000 millisecondes est alloué au joueur pour
               mémoriser le tout.
             </p>
@@ -143,11 +143,11 @@
               Dans la première des deux fonctions visant à évaluer si le joueur
               a réussi à reproduire la suite, on obtient la réponse du joueur.
               Si le joueur entre des espaces entre les nombres, le programme les
-              effaces afin de faciliter la comparaison. Dans la deuxième
+              efface afin de faciliter la comparaison. Dans la deuxième
               fonction, chaque caractère de la string de la séquence de
               l'utilisateur est réduit à son équivalent en int puis comparé à la
               suite précédemment générée par l'ordinateur. Le joueur est
-              déterminé perdant si l'un des caractère est erroné.
+              déterminé perdant si l'un des caractères est erroné.
             </p>
           </div>
           <a href="Images\reproduire_suite-séquentialité.png">
@@ -161,7 +161,7 @@
           <div class="projet-texte">
             <h4>Modification du niveau de l'utilisateur</h4>
             <p>
-              Lorsque le joueur a terminé de jouer ou qu'il a perdu toutes ses
+              Lorsque le joueur a terminé de jouer ou qu'il a perdu tous ses
               vies, il est important de sauvegarder son progrès dans le fichier.
               Cette fonction remplace l'ancien fichier par le nouveau du même
               nom en y recollant toutes les données puis en modifiant le niveau
